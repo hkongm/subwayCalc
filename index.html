@@ -2,10 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="csss.css">
   <title>Document</title>
 </head>
 <body>
-  <script src="s.autoimg.cn/mass/mass-1.4.1.min.js"></script>
+  <div class="wrapper">
+    <div class="page cover">
+      <div class="cloud"></div>
+      <div class="zhang"></div>
+      <div class="bluebar"></div>
+      <div class="title"></div>
+      <div class="title-sub"></div>
+      <div class="title-logo"></div>
+      <div class="train"></div>
+      <div class="head"></div>
+      <div class="spacer"></div>
+      <div class="intro">
+        <p>
+          <strong>地铁涨价啦！！！</strong>
+          <br>
+          但你知道市政府对通勤人员有补助政策么？
+          <br>
+          让我帮你算算你每个月乘坐地铁的实际花销吧。
+        </p>
+        <div class="form">
+          <div>
+            &nbsp;&nbsp;<label for="">你单程票价:</label>
+            <input type="number" id="single" value="5" placeholder="5">
+            <span class="rmb">RMB</span>
+          </div>
+          <div>
+            <label for="">每月上班天数:</label>
+            <input type="number" id="days" value="21" placeholder="21">
+            <span class="days">天</span>&nbsp;
+          </div>
+        </div>
+        <button class="btn" id="go">马上计算</button>
+      </div>
+      <div class="copyrights">
+        UI Designer:杨岚
+        <br>
+        FE Developer:蔡超
+      </div>
+    </div>
+    <div class="page result">
+      <div class="txt"></div>
+    </div>
+  </div>
+<!--  <script src="s.autoimg.cn/mass/mass-1.4.1.min.js"></script>-->
   <script src="main.js"></script>
 </body>
 </html>
