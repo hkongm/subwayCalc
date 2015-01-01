@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0; }
 
-/* line 8, F:/Gits/subwayCalc/css.scss */
+/* line 14, F:/Gits/subwayCalc/css.scss */
 html, body, .wrapper {
   height: 100%;
   width: 100%;
@@ -12,46 +12,51 @@ html, body, .wrapper {
   line-height: 1.5;
   overflow: hidden; }
 
-/* line 16, F:/Gits/subwayCalc/css.scss */
+/* line 22, F:/Gits/subwayCalc/css.scss */
 p {
   text-align: left; }
 
-/* line 20, F:/Gits/subwayCalc/css.scss */
+/* line 26, F:/Gits/subwayCalc/css.scss */
 .wrapper {
   color: #fff; }
-  /* line 23, F:/Gits/subwayCalc/css.scss */
+  /* line 29, F:/Gits/subwayCalc/css.scss */
   .wrapper.result .cover {
-    -webkit-transform: scale(0.5); }
-  /* line 26, F:/Gits/subwayCalc/css.scss */
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5); }
+  /* line 32, F:/Gits/subwayCalc/css.scss */
   .wrapper.result .result {
-    -webkit-transform: translate3d(0, -100%, 0); }
-    /* line 30, F:/Gits/subwayCalc/css.scss */
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+    /* line 36, F:/Gits/subwayCalc/css.scss */
     .wrapper.result .result .title, .wrapper.result .result .title-sub, .wrapper.result .result .title-logo {
       z-index: 160; }
-      /* line 32, F:/Gits/subwayCalc/css.scss */
+      /* line 38, F:/Gits/subwayCalc/css.scss */
       .wrapper.result .result .title.on, .wrapper.result .result .title-sub.on, .wrapper.result .result .title-logo.on {
-        -webkit-transform: translate3d(-13%, 100%, 0); }
-    /* line 36, F:/Gits/subwayCalc/css.scss */
+        -webkit-transform: translate3d(-13%, 100%, 0);
+        transform: translate3d(-13%, 100%, 0); }
+    /* line 42, F:/Gits/subwayCalc/css.scss */
     .wrapper.result .result .bluebar {
       -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
       z-index: 150; }
-    /* line 40, F:/Gits/subwayCalc/css.scss */
+    /* line 46, F:/Gits/subwayCalc/css.scss */
     .wrapper.result .result .btn {
       position: absolute;
-      top: 72%;
+      top: 74%;
       left: 50%;
       margin-left: -144px;
       z-index: 200; }
-      /* line 46, F:/Gits/subwayCalc/css.scss */
+      /* line 52, F:/Gits/subwayCalc/css.scss */
       .wrapper.result .result .btn.reset {
         background-color: #61757f;
         margin-left: 20px;
         box-shadow: 0 4px 0 #52626b; }
-    /* line 52, F:/Gits/subwayCalc/css.scss */
+    /* line 58, F:/Gits/subwayCalc/css.scss */
     .wrapper.result .result .copyrights {
-      -webkit-transform: translate3d(0, 0, 0); }
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
 
-/* line 59, F:/Gits/subwayCalc/css.scss */
+/* line 65, F:/Gits/subwayCalc/css.scss */
 .copyrights {
   font-size: 12px;
   position: absolute;
@@ -60,23 +65,25 @@ p {
   margin-left: -52px;
   bottom: 10px;
   transition: all 1s;
-  -webkit-transform: translate3d(0, 200%, 0); }
-  /* line 68, F:/Gits/subwayCalc/css.scss */
+  -webkit-transform: translate3d(0, 200%, 0);
+  transform: translate3d(0, 200%, 0); }
+  /* line 74, F:/Gits/subwayCalc/css.scss */
   .copyrights.on {
-    -webkit-transform: translate3d(0, 0, 0); }
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
 
-/* line 72, F:/Gits/subwayCalc/css.scss */
+/* line 78, F:/Gits/subwayCalc/css.scss */
 .page {
   height: 100%;
   width: 100%;
   position: relative;
   background-color: #48cbd8;
   transition: all 0.6s ease-in; }
-  /* line 81, F:/Gits/subwayCalc/css.scss */
+  /* line 87, F:/Gits/subwayCalc/css.scss */
   .page.result {
     z-index: 100; }
 
-/* line 95, F:/Gits/subwayCalc/css.scss */
+/* line 101, F:/Gits/subwayCalc/css.scss */
 .cloud, .zhang, .bluebar, .title, .title-sub, .title-logo, .train, .head, .board, .avatar {
   background-repeat: no-repeat;
   background-size: contain;
@@ -87,104 +94,110 @@ p {
   transition: all 0.5s ease-in;
   /*  -webkit-animation-iteration-count:1;*/ }
 
-/* line 106, F:/Gits/subwayCalc/css.scss */
+/* line 112, F:/Gits/subwayCalc/css.scss */
 .spacer {
   height: 218px; }
 
-/* line 112, F:/Gits/subwayCalc/css.scss */
+/* line 118, F:/Gits/subwayCalc/css.scss */
 .on {
   opacity: 1; }
 
-/* line 115, F:/Gits/subwayCalc/css.scss */
+/* line 121, F:/Gits/subwayCalc/css.scss */
 .pop {
   -webkit-animation: pop 1s ease; }
 
-/* line 118, F:/Gits/subwayCalc/css.scss */
+/* line 124, F:/Gits/subwayCalc/css.scss */
 .jump {
   -webkit-animation: jump 1s ease infinite; }
 
-/* line 121, F:/Gits/subwayCalc/css.scss */
+/* line 127, F:/Gits/subwayCalc/css.scss */
 .jump2 {
   -webkit-animation: jump2 1s ease infinite; }
 
-/* line 125, F:/Gits/subwayCalc/css.scss */
+/* line 131, F:/Gits/subwayCalc/css.scss */
 .cloud {
   background-image: url(img/cloud.png); }
 
-/* line 128, F:/Gits/subwayCalc/css.scss */
+/* line 134, F:/Gits/subwayCalc/css.scss */
 .zhang {
   background-image: url(img/zhang.png); }
 
-/* line 131, F:/Gits/subwayCalc/css.scss */
+/* line 137, F:/Gits/subwayCalc/css.scss */
 .bluebar {
   background-image: url(img/bluebar.png);
   -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
   transition-duration: 0.5s; }
-  /* line 135, F:/Gits/subwayCalc/css.scss */
+  /* line 141, F:/Gits/subwayCalc/css.scss */
   .bluebar.on {
-    -webkit-transform: translate3d(0, 0, 0); }
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
 
-/* line 139, F:/Gits/subwayCalc/css.scss */
+/* line 145, F:/Gits/subwayCalc/css.scss */
 .title {
   background-image: url(img/title.png); }
 
-/* line 142, F:/Gits/subwayCalc/css.scss */
+/* line 148, F:/Gits/subwayCalc/css.scss */
 .title-sub {
   background-image: url(img/title_sub.png);
   /*  -webkit-transform:translate3d(0,-10px,0) scale(.5);*/
   /*  -webkit-animation:fadeIn 1s ease 1s 1;*/ }
 
-/* line 147, F:/Gits/subwayCalc/css.scss */
+/* line 153, F:/Gits/subwayCalc/css.scss */
 .title-sub.on {
   /*  -webkit-transform:translate3d(0,0,0) scale(1);*/
   /*  background-image: url(img/title_sub.png);*/
   /*  -webkit-animation:fadeIn 1s ease;*/ }
 
-/* line 152, F:/Gits/subwayCalc/css.scss */
+/* line 158, F:/Gits/subwayCalc/css.scss */
 .title-logo {
   background-image: url(img/title_logo.png); }
 
-/* line 156, F:/Gits/subwayCalc/css.scss */
+/* line 162, F:/Gits/subwayCalc/css.scss */
 .train, .head {
   background-image: url(img/train.png);
   opacity: 1;
-  -webkit-transform: translate3d(-100%, 0, 0); }
-  /* line 160, F:/Gits/subwayCalc/css.scss */
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0); }
+  /* line 166, F:/Gits/subwayCalc/css.scss */
   .train.on, .head.on {
     -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
     transition: 1s ease-out; }
-  /* line 164, F:/Gits/subwayCalc/css.scss */
+  /* line 170, F:/Gits/subwayCalc/css.scss */
   .train.back, .head.back {
-    transition: 0.2s ease-out;
-    -webkit-transform: translate3d(-5px, 0, 0); }
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+    transition: 0.2s ease-out; }
 
-/* line 169, F:/Gits/subwayCalc/css.scss */
+/* line 175, F:/Gits/subwayCalc/css.scss */
 .head {
   background-image: url(img/head.png); }
 
-/* line 173, F:/Gits/subwayCalc/css.scss */
+/* line 179, F:/Gits/subwayCalc/css.scss */
 .intro {
   width: 300px;
   margin: 0 auto;
   text-align: center;
   opacity: 0;
   transition: all 0.5s; }
-  /* line 179, F:/Gits/subwayCalc/css.scss */
+  /* line 185, F:/Gits/subwayCalc/css.scss */
   .intro.on {
     opacity: 1; }
 
-/* line 184, F:/Gits/subwayCalc/css.scss */
+/* line 190, F:/Gits/subwayCalc/css.scss */
 .form {
   background-color: #56d3de;
   margin: 10px 0;
-  padding: 10px;
+  padding: 10px 0 10px 25px;
   font-size: 1.4rem;
-  text-align: center; }
-  /* line 190, F:/Gits/subwayCalc/css.scss */
+  text-align: left; }
+  /* line 196, F:/Gits/subwayCalc/css.scss */
   .form div {
     margin: 4px 0; }
-  /* line 193, F:/Gits/subwayCalc/css.scss */
+  /* line 199, F:/Gits/subwayCalc/css.scss */
   .form input {
+    font-family: arial;
     width: 3em;
     color: #506774;
     background-color: #fff;
@@ -192,15 +205,16 @@ p {
     text-align: center;
     border: none;
     border-radius: 5px; }
-  /* line 203, F:/Gits/subwayCalc/css.scss */
+  /* line 210, F:/Gits/subwayCalc/css.scss */
   .form .rmb, .form .days {
+    font-family: arial;
     font-weight: bold;
     color: #f56854; }
-  /* line 207, F:/Gits/subwayCalc/css.scss */
+  /* line 215, F:/Gits/subwayCalc/css.scss */
   .form .days {
     color: #fff3a5; }
 
-/* line 211, F:/Gits/subwayCalc/css.scss */
+/* line 219, F:/Gits/subwayCalc/css.scss */
 .btn {
   color: #fff;
   font-size: 1.5em;
@@ -210,20 +224,20 @@ p {
   border-radius: 5px;
   box-shadow: 0 4px 0 #f34a32; }
 
-/* line 222, F:/Gits/subwayCalc/css.scss */
+/* line 230, F:/Gits/subwayCalc/css.scss */
 .point {
   position: absolute;
   top: 4%;
   left: 50%;
   margin-left: -90px;
   width: 180px; }
-  /* line 228, F:/Gits/subwayCalc/css.scss */
+  /* line 236, F:/Gits/subwayCalc/css.scss */
   .point div {
     line-height: 1; }
-  /* line 231, F:/Gits/subwayCalc/css.scss */
+  /* line 239, F:/Gits/subwayCalc/css.scss */
   .point h3 {
     font-size: 25px; }
-  /* line 234, F:/Gits/subwayCalc/css.scss */
+  /* line 242, F:/Gits/subwayCalc/css.scss */
   .point .pts {
     float: left;
     font-size: 30px;
@@ -231,97 +245,103 @@ p {
     border-radius: 5px;
     color: #f56854;
     font-weight: bold;
-    padding: 7px 30px;
+    padding: 7px 27px;
     margin-right: 10px; }
-  /* line 244, F:/Gits/subwayCalc/css.scss */
+  /* line 252, F:/Gits/subwayCalc/css.scss */
   .point .rmb {
+    font-family: arial;
     color: #fff3a5;
     font-size: 28px;
     font-weight: bold;
     line-height: 1; }
 
-/* line 253, F:/Gits/subwayCalc/css.scss */
+/* line 262, F:/Gits/subwayCalc/css.scss */
 .board {
   background-image: url(img/board.png);
   height: 390px;
   opacity: 1;
   z-index: 120; }
-  /* line 258, F:/Gits/subwayCalc/css.scss */
+  /* line 267, F:/Gits/subwayCalc/css.scss */
   .board .txt {
     height: 4.5em;
-    -webkit-transform: translateX(38%) translateY(254%); }
+    -webkit-transform: translateX(38%) translateY(254%);
+    transform: translateX(38%) translateY(254%); }
 
-/* line 265, F:/Gits/subwayCalc/css.scss */
+/* line 274, F:/Gits/subwayCalc/css.scss */
 .avatar {
   height: 340px;
   z-index: 130;
   transition-delay: 0.5s;
   -webkit-transform: scale(0.5); }
-  /* line 270, F:/Gits/subwayCalc/css.scss */
+  /* line 279, F:/Gits/subwayCalc/css.scss */
   .avatar.a1 {
     background-image: url(img/avatar1.png); }
-  /* line 273, F:/Gits/subwayCalc/css.scss */
+  /* line 282, F:/Gits/subwayCalc/css.scss */
   .avatar.a2 {
     background-image: url(img/avatar2.png); }
-  /* line 276, F:/Gits/subwayCalc/css.scss */
+  /* line 285, F:/Gits/subwayCalc/css.scss */
   .avatar.a3 {
     background-image: url(img/avatar3.png); }
-  /* line 279, F:/Gits/subwayCalc/css.scss */
+  /* line 288, F:/Gits/subwayCalc/css.scss */
   .avatar.a4 {
     background-image: url(img/avatar4.png); }
-  /* line 282, F:/Gits/subwayCalc/css.scss */
+  /* line 291, F:/Gits/subwayCalc/css.scss */
   .avatar.on {
-    -webkit-transform: scale(1); }
+    -webkit-transform: scale(1);
+    transform: scale(1); }
 
 @media (min-device-width: 360px) {
   /* 360px width */
-  /* line 296, F:/Gits/subwayCalc/css.scss */
+  /* line 305, F:/Gits/subwayCalc/css.scss */
   .cloud, .zhang, .bluebar, .title, .title-sub, .title-logo, .train, .head {
     height: 235px; }
 
-  /* line 299, F:/Gits/subwayCalc/css.scss */
+  /* line 308, F:/Gits/subwayCalc/css.scss */
   .spacer {
     height: 245px; }
 
-  /* line 303, F:/Gits/subwayCalc/css.scss */
+  /* line 312, F:/Gits/subwayCalc/css.scss */
   .board .txt {
-    -webkit-transform: translateX(38%) translateY(290%); }
+    -webkit-transform: translateX(38%) translateY(290%);
+    transform: translateX(38%) translateY(290%); }
  }
 
 @media (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   /*iphone 6*/
-  /* line 333, F:/Gits/subwayCalc/css.scss */
+  /* line 342, F:/Gits/subwayCalc/css.scss */
   .cloud, .zhang, .bluebar, .title, .title-sub, .title-logo, .train, .head {
     height: 244px; }
 
-  /* line 336, F:/Gits/subwayCalc/css.scss */
+  /* line 345, F:/Gits/subwayCalc/css.scss */
   .spacer {
     height: 255px; }
 
-  /* line 340, F:/Gits/subwayCalc/css.scss */
+  /* line 349, F:/Gits/subwayCalc/css.scss */
   .board .txt {
-    -webkit-transform: translateX(38%) translateY(304%); }
+    -webkit-transform: translateX(38%) translateY(304%);
+    transform: translateX(38%) translateY(304%); }
 
-  /* line 344, F:/Gits/subwayCalc/css.scss */
+  /* line 353, F:/Gits/subwayCalc/css.scss */
   .avatar {
     height: 360px; }
  }
 
 @media (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
   /*iphone 6 plus*/
-  /* line 357, F:/Gits/subwayCalc/css.scss */
+  /* line 366, F:/Gits/subwayCalc/css.scss */
   .cloud, .zhang, .bluebar, .title, .title-sub, .title-logo, .train, .head {
     height: 270px; }
 
-  /* line 360, F:/Gits/subwayCalc/css.scss */
+  /* line 369, F:/Gits/subwayCalc/css.scss */
   .spacer {
     height: 280px; }
 
-  /* line 364, F:/Gits/subwayCalc/css.scss */
+  /* line 373, F:/Gits/subwayCalc/css.scss */
   .board .txt {
-    -webkit-transform: translateX(38%) translateY(343%); }
+    -webkit-transform: translateX(38%) translateY(343%);
+    transform: translateX(38%) translateY(343%); }
 
-  /* line 368, F:/Gits/subwayCalc/css.scss */
+  /* line 377, F:/Gits/subwayCalc/css.scss */
   .avatar {
     height: 400px; }
  }
@@ -338,48 +358,58 @@ p {
 }
 */
 @-webkit-keyframes pop {
-  /* line 387, F:/Gits/subwayCalc/css.scss */
+  /* line 396, F:/Gits/subwayCalc/css.scss */
   0% {
     opacity: 0.3;
-    -webkit-transform: scale(0.1); }
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1); }
 
-  /* line 391, F:/Gits/subwayCalc/css.scss */
+  /* line 400, F:/Gits/subwayCalc/css.scss */
   60% {
     opacity: 1;
-    -webkit-transform: scale(1.1); }
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
 
-  /* line 395, F:/Gits/subwayCalc/css.scss */
-  75% {
-    -webkit-transform: scale(0.9); }
-
-  /* line 398, F:/Gits/subwayCalc/css.scss */
-  100% {
-    -webkit-transform: scale(1); } }
-
-@-webkit-keyframes jump {
   /* line 404, F:/Gits/subwayCalc/css.scss */
-  0% {
-    -webkit-transform: translate3d(0, 0, 0); }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); }
 
   /* line 407, F:/Gits/subwayCalc/css.scss */
-  50% {
-    -webkit-transform: translate3d(0, -5px, 0); }
-
-  /* line 410, F:/Gits/subwayCalc/css.scss */
   100% {
-    -webkit-transform: translate3d(0, 0, 0); } }
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 
-@-webkit-keyframes jump2 {
-  /* line 416, F:/Gits/subwayCalc/css.scss */
+@-webkit-keyframes jump {
+  /* line 413, F:/Gits/subwayCalc/css.scss */
   0% {
-    -webkit-transform: translate3d(-13%, 100%, 0); }
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  /* line 416, F:/Gits/subwayCalc/css.scss */
+  50% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0); }
 
   /* line 419, F:/Gits/subwayCalc/css.scss */
-  50% {
-    -webkit-transform: translate3d(-13%, 99%, 0); }
-
-  /* line 422, F:/Gits/subwayCalc/css.scss */
   100% {
-    -webkit-transform: translate3d(-13%, 100%, 0); } }
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@-webkit-keyframes jump2 {
+  /* line 425, F:/Gits/subwayCalc/css.scss */
+  0% {
+    -webkit-transform: translate3d(-13%, 100%, 0);
+    transform: translate3d(-13%, 100%, 0); }
+
+  /* line 428, F:/Gits/subwayCalc/css.scss */
+  50% {
+    -webkit-transform: translate3d(-13%, 99%, 0);
+    transform: translate3d(-13%, 99%, 0); }
+
+  /* line 431, F:/Gits/subwayCalc/css.scss */
+  100% {
+    -webkit-transform: translate3d(-13%, 100%, 0);
+    transform: translate3d(-13%, 100%, 0); } }
 
 /*# sourceMappingURL=css.css.map */

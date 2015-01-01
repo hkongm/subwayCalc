@@ -1,30 +1,28 @@
 // 去掉setTimeout!!!
 ;(function(doc){
   
-  var $ = function (selector) {
+  var $$ = function (selector) {
     return doc.querySelector(selector);
   }
   
-  var s1 = $('button');
-  
-  var wrapper = $('.wrapper'),
-      cloud = $('.cloud'),
-      zhang = $('.zhang'),
-      bluebar = $('.bluebar'),
-      title = $('.title'),
-      title_sub = $('.title-sub'),
-      title_logo = $('.title-logo'),
-      title_logo2 = $('.result .title-logo'),
-      train = $('.train'),
-      head = $('.head'),
-      intro = $('.intro'),
-      copyrights = $('.copyrights'),
-      go = $('#go'),
-      ptsbox = $('.pts'),
-      txtbox = $('.txt'),
-      avatar = $('.avatar'),
-      btnShare = $('.share'),
-      btnReset = $('.reset'),
+  var wrapper = $$('.wrapper'),
+      cloud = $$('.cloud'),
+      zhang = $$('.zhang'),
+      bluebar = $$('.bluebar'),
+      title = $$('.title'),
+      title_sub = $$('.title-sub'),
+      title_logo = $$('.title-logo'),
+      title_logo2 = $$('.result .title-logo'),
+      train = $$('.train'),
+      head = $$('.head'),
+      intro = $$('.intro'),
+      copyrights = $$('.copyrights'),
+      go = $$('#go'),
+      ptsbox = $$('.pts'),
+      txtbox = $$('.txt'),
+      avatar = $$('.avatar'),
+      btnShare = $$('.share'),
+      btnReset = $$('.reset'),
       evAniEnd = 'webkitAnimationEnd',
       evTraEnd = 'webkitTransitionEnd';
   
@@ -60,6 +58,11 @@
   bindEv(intro, function () {
     copyrights.classList.add('on');
   }, evTraEnd)
+  
+  $$('.result').addEventListener(evTraEnd, function () {
+    avatar.classList.add('on');
+    title_logo2.classList.add('jump2');
+  })
 
 
   // 提交表单
@@ -104,11 +107,6 @@
     alert('分享')
   })
   
-  $('.result').addEventListener('webkitTransitionEnd', function () {
-    avatar.classList.add('on');
-    title_logo2.classList.add('jump2');
-  })
-  
   // start 
   setTimeout(function(){
     cloud.classList.add('on')
@@ -118,7 +116,12 @@
 
 function bindEv (el, callback, type) {
   type = type || 'click';
-  el.addEventListener(type, callback);
+  if (type.indexOf('webkit') > -1) {
+    alert(type.substr(6,type.length).toLowerCase());
+    el.addEventListener(type.substr(6,type.length).toLowerCase(), callback, false);
+  }
+  el.addEventListener(type, callback, false);
+  
 }
 
 function calc(single, days) {
