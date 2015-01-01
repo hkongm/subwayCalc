@@ -1,3 +1,4 @@
+// 去掉setTimeout!!!
 ;(function(doc){
   
   var $ = function (selector) {
@@ -6,7 +7,6 @@
   
   var s1 = $('button');
   
-
   var wrapper = $('.wrapper'),
       cloud = $('.cloud'),
       zhang = $('.zhang'),
@@ -14,75 +14,116 @@
       title = $('.title'),
       title_sub = $('.title-sub'),
       title_logo = $('.title-logo'),
+      title_logo2 = $('.result .title-logo'),
       train = $('.train'),
       head = $('.head'),
       intro = $('.intro'),
       copyrights = $('.copyrights'),
-      txtbox = $('.txt');
+      go = $('#go'),
+      ptsbox = $('.pts'),
+      txtbox = $('.txt'),
+      avatar = $('.avatar'),
+      btnShare = $('.share'),
+      btnReset = $('.reset'),
+      evAniEnd = 'webkitAnimationEnd',
+      evTraEnd = 'webkitTransitionEnd';
   
-  cloud.addEventListener('webkitTransitionEnd', function () {
+  // 封面动画集
+  bindEv(cloud, function () {
     zhang.classList.add('on');
-  })
-  zhang.addEventListener('webkitTransitionEnd', function () {
+  }, evTraEnd)
+  bindEv(zhang, function () {
     bluebar.classList.add('on');
-  })
-  bluebar.addEventListener('webkitTransitionEnd', function () {
+  }, evTraEnd)
+  bindEv(bluebar, function () {
     title.classList.add('on');
-  })
-  title.addEventListener('webkitTransitionEnd', function () {
+  }, evTraEnd)
+  bindEv(title, function () {
     title_sub.classList.add('on');
     title_sub.classList.add('pop');
-  })
-  title_sub.addEventListener('webkitAnimationEnd', function () {
+  }, evTraEnd)
+  bindEv(title_sub, function () {
     title_logo.classList.add('on');
-  })
-  title_logo.addEventListener('webkitTransitionEnd', function () {
+  }, evAniEnd)
+  bindEv(title_logo, function () {
     train.classList.add('on');
     head.classList.add('on');
-  })
-  head.addEventListener('webkitTransitionEnd', function () {
+  }, evTraEnd)
+  bindEv(head, function () {
     train.classList.add('back');
     head.classList.add('back');
     title_logo.classList.add('jump');
-  })
-  train.addEventListener('webkitTransitionEnd', function () {
+  }, evTraEnd)
+  bindEv(train, function () {
     intro.classList.add('on');
-  })
-  intro.addEventListener('webkitTransitionEnd', function () {
+  }, evTraEnd)
+  bindEv(intro, function () {
     copyrights.classList.add('on');
+  }, evTraEnd)
+
+
+  // 提交表单
+  bindEv(go, function(){
+    var single = $('#single').value,
+        days = $('#days').value;
+    if (single<3 || single >20) {
+      alert('价格输入有误，请检查是否填写正确');
+      return;
+    }
+    if (days < 1 || single > 31) {
+      alert('天数输入有误，请检查是否填写正确');
+      return;
+    }
+    wrapper.classList.toggle('result');
+    var sum = calc(single, days);
+    var txt = '哥<br>本系统判断你不是俺们公司的人<br>你咋混进来的？',
+          avt = 4;
+    if (sum < 100) {
+      txt = '你住的好近啊<br>着实令人羡慕<br>无法享受优惠';
+      avt = 1;
+    } else if (sum < 150) {
+      txt = '其实你不是最远的亲<br>八折就够了亲';
+      avt = 2;
+    } else if (sum < 400) {
+      txt = '可怜的亲<br>我们同病相怜<br>五折算是点小安慰吧';
+      avt = 3;
+    }
+    ptsbox.innerHTML = sum;
+    txtbox.innerHTML = txt;
+    avatar.classList.add('a' + avt);
+  })
+
+  // 重新计算
+  bindEv(btnReset, function () {
+    location.reload();
   })
   
+  // 分享
+  bindEv(btnShare, function () {
+    alert('分享')
+  })
   
+  $('.result').addEventListener('webkitTransitionEnd', function () {
+    avatar.classList.add('on');
+    title_logo2.classList.add('jump2');
+  })
   
   // start 
   setTimeout(function(){
     cloud.classList.add('on')
   },50)
-//  cloud.addEventListener('webkitAnimationEnd', function () {
-//    zhang.classList.add('on')
-//  })
   
-//  s1.addEventListener('click', function(){
-//    wrapper.classList.toggle('result');
-//  });
-//  
-//  var txt = '哥，本系统判断你不是俺们公司的人，你咋混进来的？';
-//  if (sum < 100) {
-//    txt = '你住的好近啊，着实令人羡慕，无法享受优惠'
-//  } else if (sum < 150) {
-//    txt = '其实你不是最远的亲，八折就够了亲'
-//  } else if (sum < 400) {
-//    txt = '可怜的亲，我们同病相怜，五折算是点小安慰吧'
-//  }
-//  
 })(document);
 
+function bindEv (el, callback, type) {
+  type = type || 'click';
+  el.addEventListener(type, callback);
+}
 
 function calc(single, days) {
   'use strict';
 
   var sum = 0,
-      days = days || 21,
       price = parseInt(single, 10),
       discountFlag1 = false,
       discountFlag2 = false;
@@ -98,8 +139,5 @@ function calc(single, days) {
     sum += price * 2;
   }
   sum = Math.floor(sum);
-//  console.log(sum);
   return sum;
 }
-
-calc(4);

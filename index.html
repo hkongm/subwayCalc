@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="csss.css">
+  <link rel="stylesheet" href="css.css">
   <title>Document</title>
 </head>
 <body>
@@ -29,12 +29,12 @@
         <div class="form">
           <div>
             &nbsp;&nbsp;<label for="">你单程票价:</label>
-            <input type="number" id="single" value="5" placeholder="5">
+            <input type="number" id="single" value="5" placeholder="5" maxlength="2">
             <span class="rmb">RMB</span>
           </div>
           <div>
             <label for="">每月上班天数:</label>
-            <input type="number" id="days" value="21" placeholder="21">
+            <input type="number" id="days" value="21" placeholder="21" maxlength="2">
             <span class="days">天</span>&nbsp;
           </div>
         </div>
@@ -47,7 +47,30 @@
       </div>
     </div>
     <div class="page result">
-      <div class="txt"></div>
+      <div class="point">
+        <h3>你每个月要花费</h3>
+        <div>
+          <div class="pts">400</div>
+          <span class="rmb">RMB</span>
+          <br>
+          在地铁上
+        </div>
+      </div>
+      <div class="board">
+        <div class="txt"></div>
+      </div>
+      <div class="train on"></div>
+      <div class="title on"></div>
+      <div class="title-sub on"></div>
+      <div class="title-logo on"></div>
+      <div class="avatar"></div>
+      <div class="bluebar on"></div>
+      <button class="btn share">分享比惨</button><button class="btn reset">重新计算</button>
+      <div class="copyrights">
+        UI Designer:杨岚
+        <br>
+        FE Developer:蔡超
+      </div>
     </div>
   </div>
 <!--  <script src="s.autoimg.cn/mass/mass-1.4.1.min.js"></script>-->

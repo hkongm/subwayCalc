@@ -1,5 +1,7 @@
 * {padding: 0; margin: 0;}
 
+$highligtColor : #f56854;
+$rmbColor : #fff3a5;
 
 html,
 body,
@@ -14,6 +16,7 @@ body,
 p {
   text-align: left;
 }
+
 .wrapper {
   color: #fff;
   &.result {
@@ -22,6 +25,33 @@ p {
     }
     .result {
       -webkit-transform:translate3d(0,-100%,0);
+      .title,
+      .title-sub,
+      .title-logo {
+        z-index: 160;
+        &.on {
+          -webkit-transform:translate3d(-13%,100%,0);
+        }
+      }
+      .bluebar {
+        -webkit-transform:translate3d(0,100%,0);
+        z-index: 150;
+      }
+      .btn {
+        position: absolute;
+        top:72%;
+        left:50%;
+        margin-left: -144px;
+        z-index: 200;
+        &.reset {
+          background-color: #61757f;
+          margin-left: 20px;
+          box-shadow: 0 4px 0 darken(#61757f,7%);
+        }
+      }
+      .copyrights {
+        -webkit-transform:translate3d(0,0,0);
+      }
     }
   }
 }
@@ -60,7 +90,9 @@ p {
 .title-sub,
 .title-logo,
 .train,
-.head {
+.head,
+.board,
+.avatar {
   background-repeat: no-repeat;
   background-size: contain;
   width:100%;
@@ -85,6 +117,9 @@ p {
 }
 .jump {
   -webkit-animation:jump 1s ease infinite;
+}
+.jump2 {
+  -webkit-animation:jump2 1s ease infinite;
 }
 
 .cloud { 
@@ -167,22 +202,87 @@ p {
   .rmb,
   .days {
     font-weight: bold;
-    color: #f56854;
+    color: $highligtColor;
   }
   .days {
-    color: #fff3a5;
+    color: $rmbColor;
   }
 }
 .btn {
   color: #fff;
   font-size: 1.5em;
   border: none;
-  background-color: #f56854;
+  background-color: $highligtColor;
   padding: .3em 1em;
   border-radius: 5px;
-  box-shadow: 0 4px 0 darken(#f56854,7%);
+  box-shadow: 0 4px 0 darken($highligtColor,7%);
 }
 
+//结果页花费
+.point {
+  position: absolute;
+  top:4%;
+  left:50%;
+  margin-left: -90px;
+  width: 180px;
+  div {
+    line-height: 1;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  .pts {
+    float: left;
+    font-size: 30px;
+    background-color: #8adee6;
+    border-radius: 5px;
+    color:$highligtColor;
+    font-weight: bold;
+    padding: 7px 30px;
+    margin-right: 10px;
+  }
+  .rmb {
+    color: $rmbColor;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+  }
+}
+
+//结果页黑板
+.board {
+  background-image: url(img/board.png);
+  height: 390px;
+  opacity: 1;
+  z-index: 120;
+  .txt {
+    height: 4.5em;
+    -webkit-transform : translateX(38%) translateY(254%)
+  }
+}
+
+// 结果页人头
+.avatar {
+  height:340px;
+  z-index: 130;
+  transition-delay: .5s;
+  -webkit-transform: scale(.5);
+  &.a1 {
+    background-image: url(img/avatar1.png);
+  }
+  &.a2 {
+    background-image: url(img/avatar2.png);
+  }
+  &.a3 {
+    background-image: url(img/avatar3.png);
+  }
+  &.a4 {
+    background-image: url(img/avatar4.png);
+  }
+  &.on {
+    -webkit-transform: scale(1);
+  }
+}
 
 @media (min-device-width : 360px) {
   /* 360px width */
@@ -199,23 +299,28 @@ p {
   .spacer {
     height:245px;
   }
-}
-@media (min-device-width : 540px) {
-  /* 360px width */
-  .cloud,
-  .zhang,
-  .bluebar,
-  .title,
-  .title-sub,
-  .title-logo,
-  .train,
-  .head {
-    height:235px;
-  }
-  .spacer {
-    height:245px;
+  .board {
+    .txt {
+      -webkit-transform : translateX(38%) translateY(290%)
+    }
   }
 }
+//@media (min-device-width : 540px) {
+//  /* 540px width */
+//  .cloud,
+//  .zhang,
+//  .bluebar,
+//  .title,
+//  .title-sub,
+//  .title-logo,
+//  .train,
+//  .head {
+//    height:235px;
+//  }
+//  .spacer {
+//    height:245px;
+//  }
+//}
 @media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
   /*iphone 6*/
   .cloud,
@@ -230,6 +335,14 @@ p {
   }
   .spacer {
     height:255px;
+  }
+  .board {
+    .txt {
+      -webkit-transform : translateX(38%) translateY(304%)
+    }
+  }
+  .avatar {
+    height: 360px;
   }
 }
 @media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){
@@ -246,6 +359,14 @@ p {
   }
   .spacer {
     height:280px;
+  }
+  .board {
+    .txt {
+      -webkit-transform : translateX(38%) translateY(343%)
+    }
+  }
+  .avatar {
+    height: 400px;
   }
 }
 
@@ -288,5 +409,17 @@ p {
   }
   100% {
     -webkit-transform:translate3d(0,0,0);
+  }
+}
+
+@-webkit-keyframes jump2 {
+  0% {
+    -webkit-transform:translate3d(-13%,100%,0);
+  }
+  50% {
+    -webkit-transform:translate3d(-13%,99%,0);
+  }
+  100% {
+    -webkit-transform:translate3d(-13%,100%,0);
   }
 }
