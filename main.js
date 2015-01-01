@@ -95,7 +95,8 @@
 
   // 重新计算
   bindEv(btnReset, function () {
-    location.reload();
+//    location.reload();
+    wrapper.classList.toggle('result')
   })
   
   // 分享
