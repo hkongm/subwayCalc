@@ -93,7 +93,6 @@
     }
     ptsbox.innerHTML = sum;
     txtbox.innerHTML = txt;
-    avatar.class = "avatar";
     avatar.classList.remove('a1');
     avatar.classList.remove('a2');
     avatar.classList.remove('a3');
