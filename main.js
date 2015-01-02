@@ -67,7 +67,6 @@
 
   // 提交表单
   bindEv(go, function(){
-    debugger;
     var single = $('#single').value,
         days = $('#days').value;
     if (single<3 || single >20) {
@@ -94,6 +93,11 @@
     }
     ptsbox.innerHTML = sum;
     txtbox.innerHTML = txt;
+    avatar.class = "avatar";
+    avatar.classList.remove('a1');
+    avatar.classList.remove('a2');
+    avatar.classList.remove('a3');
+    avatar.classList.remove('a4');
     avatar.classList.add('a' + avt);
   })
 
