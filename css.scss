@@ -8,6 +8,10 @@ $numFont : arial;
   -webkit-transform:$param;
   transform:$param;
 }
+@mixin transition($param...) {
+  -webkit-transition:$param;
+  transition:$param;
+}
 
 html,
 body,
@@ -69,7 +73,7 @@ p {
   width: 104px;
   margin-left: -52px;
   bottom:10px;
-  transition: all 1s;
+  @include transition(all 1s);
   @include transform(translate3d(0,200%,0));
   &.on {
     @include transform(translate3d(0,0,0));
@@ -80,7 +84,7 @@ p {
   width: 100%;
   position: relative;
   background-color: #48cbd8;
-  transition: all .6s ease-in;
+  @include transition(all .6s ease-in);
   &.cover {
     
   }
@@ -105,7 +109,7 @@ p {
   height:208px;
   position: absolute;
   opacity: 0;
-  transition: all .5s ease-in;
+  @include transition(all .5s ease-in);
 /*  -webkit-animation-iteration-count:1;*/
 }
 
@@ -136,7 +140,8 @@ p {
 }
 .bluebar {
   background-image: url(img/bluebar.png);
-  @include transform(translate3d(100%,0,0));
+  @include transform(translate3d(100%,0,0))
+  -webkit-transition-duration: ;
   transition-duration: .5s;
   &.on {
     @include transform(translate3d(0,0,0));
@@ -165,11 +170,11 @@ p {
   @include transform(translate3d(-100%,0,0));
   &.on {
     @include transform(translate3d(0,0,0));
-    transition: 1s ease-out;
+    @include transition(1s ease-out);
   }
   &.back {
     @include transform(translate3d(-5px,0,0));
-    transition: .2s ease-out;
+    @include transition(.2s ease-out);
   }
 }
 .head {
@@ -181,7 +186,7 @@ p {
   margin: 0 auto;
   text-align: center;
   opacity: 0;
-  transition: all .5s;
+  @include transition(all .5s);
   &.on {
     opacity: 1;
   }
@@ -274,8 +279,9 @@ p {
 .avatar {
   height:340px;
   z-index: 130;
+  -webkit-transition-delay: .5s;
   transition-delay: .5s;
-  -webkit-transform: scale(.5);
+  @include transform(scale(.5));
   &.a1 {
     background-image: url(img/avatar1.png);
   }

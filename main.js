@@ -1,28 +1,28 @@
 // 去掉setTimeout!!!
 ;(function(doc){
   
-  var $$ = function (selector) {
+  var $ = function (selector) {
     return doc.querySelector(selector);
   }
   
-  var wrapper = $$('.wrapper'),
-      cloud = $$('.cloud'),
-      zhang = $$('.zhang'),
-      bluebar = $$('.bluebar'),
-      title = $$('.title'),
-      title_sub = $$('.title-sub'),
-      title_logo = $$('.title-logo'),
-      title_logo2 = $$('.result .title-logo'),
-      train = $$('.train'),
-      head = $$('.head'),
-      intro = $$('.intro'),
-      copyrights = $$('.copyrights'),
-      go = $$('#go'),
-      ptsbox = $$('.pts'),
-      txtbox = $$('.txt'),
-      avatar = $$('.avatar'),
-      btnShare = $$('.share'),
-      btnReset = $$('.reset'),
+  var wrapper = $('.wrapper'),
+      cloud = $('.cloud'),
+      zhang = $('.zhang'),
+      bluebar = $('.bluebar'),
+      title = $('.title'),
+      title_sub = $('.title-sub'),
+      title_logo = $('.title-logo'),
+      title_logo2 = $('.result .title-logo'),
+      train = $('.train'),
+      head = $('.head'),
+      intro = $('.intro'),
+      copyrights = $('.copyrights'),
+      go = $('#go'),
+      ptsbox = $('.pts'),
+      txtbox = $('.txt'),
+      avatar = $('.avatar'),
+      btnShare = $('.share'),
+      btnReset = $('.reset'),
       evAniEnd = 'webkitAnimationEnd',
       evTraEnd = 'webkitTransitionEnd';
   
@@ -59,7 +59,7 @@
     copyrights.classList.add('on');
   }, evTraEnd)
   
-  $$('.result').addEventListener(evTraEnd, function () {
+  $('.result').addEventListener(evTraEnd, function () {
     avatar.classList.add('on');
     title_logo2.classList.add('jump2');
   })
@@ -67,6 +67,7 @@
 
   // 提交表单
   bindEv(go, function(){
+    debugger;
     var single = $('#single').value,
         days = $('#days').value;
     if (single<3 || single >20) {
@@ -117,7 +118,6 @@
 function bindEv (el, callback, type) {
   type = type || 'click';
   if (type.indexOf('webkit') > -1) {
-    alert(type.substr(6,type.length).toLowerCase());
     el.addEventListener(type.substr(6,type.length).toLowerCase(), callback, false);
   }
   el.addEventListener(type, callback, false);
