@@ -62,7 +62,27 @@ p {
   background-color: #48cbd8;
   @include transition(all .7s ease);
   &.cover {
-    
+    i,em {
+      display: inline-block;
+      text-align: center;
+      line-height: 1;
+      font:1em/1em normal "san-serif";
+    }
+    i {
+      background-color: #0088c7;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+    }
+    em {
+      color: #506774;
+      width: 2em;
+      height: 1.5em;
+      line-height: 1.5em;
+      background-color: #fff;
+      border-radius: 5px;
+    }
   }
   &.result {
     z-index: 100;
@@ -202,18 +222,11 @@ p {
   padding: 10px 0 10px 25px;
   font-size: 1.4rem;
   text-align: left;
+  strong {
+    font-weight: normal;
+  }
   div {
     margin: 4px 0;
-  }
-  input {
-    font-family: $numFont;
-    width: 3em;
-    color: #506774;
-    background-color: #fff;
-    font-size: inherit;
-    text-align: center;
-    border: none;
-    border-radius: 5px;
   }
   .rmb,
   .days {
@@ -266,7 +279,6 @@ p {
     line-height: 1;
   }
 }
-
 //结果页黑板
 .board {
   background-image: url(img/board.png);

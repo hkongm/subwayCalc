@@ -23,6 +23,10 @@
       avatar = $('.avatar'),
       btnShare = $('.share'),
       btnReset = $('.reset'),
+      add = $('.add'),
+      sub = $('.sub'),
+      dadd = $('.dadd'),
+      dsub = $('.dsub'),
       evAniEnd = 'webkitAnimationEnd',
       evTraEnd = 'webkitTransitionEnd';
   
@@ -67,9 +71,9 @@
 
   // 提交表单
   bindEv(go, function(){
-    var single = $('#single').value,
-        days = $('#days').value;
-    if (single<3 || single >20) {
+    var single = parseInt($('#single').innerHTML, 10),
+        days = parseInt($('#days').innerHTML, 10);
+    if (single < 3 || single >20) {
       alert('价格输入有误，请检查是否填写正确');
       return;
     }
@@ -99,6 +103,24 @@
     avatar.classList.remove('a3');
     avatar.classList.remove('a4');
     avatar.classList.add('a' + avt);
+  })
+
+  // 加减号
+  bindEv(add, function (e) {
+    var input = e.target.previousElementSibling;
+    input.innerHTML = parseInt(input.innerHTML, 10) + 1;
+  })
+  bindEv(sub, function (e) {
+    var input = e.target.nextElementSibling;
+    input.innerHTML = parseInt(input.innerHTML, 10) - 1;
+  })
+  bindEv(dadd, function (e) {
+    var input = e.target.previousElementSibling;
+    input.innerHTML = parseInt(input.innerHTML, 10) + 1;
+  })
+  bindEv(dsub, function (e) {
+    var input = e.target.nextElementSibling;
+    input.innerHTML = parseInt(input.innerHTML, 10) - 1;
   })
 
   // 重新计算
