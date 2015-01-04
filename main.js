@@ -28,7 +28,8 @@
       dadd = $('.dadd'),
       dsub = $('.dsub'),
       evAniEnd = 'webkitAnimationEnd',
-      evTraEnd = 'webkitTransitionEnd';
+      evTraEnd = 'webkitTransitionEnd',
+      tap = 'touchstart';
   
   // 封面动画集
   bindEv(cloud, function () {
@@ -109,19 +110,19 @@
   bindEv(add, function (e) {
     var input = e.target.previousElementSibling;
     input.innerHTML = parseInt(input.innerHTML, 10) + 1;
-  })
+  }, tap)
   bindEv(sub, function (e) {
     var input = e.target.nextElementSibling;
     input.innerHTML = parseInt(input.innerHTML, 10) - 1;
-  })
+  }, tap)
   bindEv(dadd, function (e) {
     var input = e.target.previousElementSibling;
     input.innerHTML = parseInt(input.innerHTML, 10) + 1;
-  })
+  }, tap)
   bindEv(dsub, function (e) {
     var input = e.target.nextElementSibling;
     input.innerHTML = parseInt(input.innerHTML, 10) - 1;
-  })
+  }, tap)
 
   // 重新计算
   bindEv(btnReset, function () {
