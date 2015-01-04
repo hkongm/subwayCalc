@@ -77,6 +77,7 @@
       alert('天数输入有误，请检查是否填写正确');
       return;
     }
+    $('.page.result').style.display = 'block';
     wrapper.classList.toggle('result');
     var sum = calc(single, days);
     var txt = '哥<br>本系统判断你不是俺们公司的人<br>你咋混进来的？',
@@ -116,6 +117,11 @@
     cloud.classList.add('on')
   },50)
   
+  // 关掉默认滚动
+  bindEv(wrapper, function (e){
+    e.preventDefault();
+  }, 'touchmove')
+  
 })(document);
 
 function bindEv (el, callback, type) {
@@ -124,7 +130,6 @@ function bindEv (el, callback, type) {
     el.addEventListener(type.substr(6,type.length).toLowerCase(), callback, false);
   }
   el.addEventListener(type, callback, false);
-  
 }
 
 function calc(single, days) {

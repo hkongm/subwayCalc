@@ -34,7 +34,6 @@ p {
       @include transform(scale(.5));
     }
     .result {
-      z-index: 100;
       @include transform(translate3d(0,0,0));
     }
   }
@@ -47,9 +46,11 @@ p {
   width: 104px;
   margin-left: -52px;
   bottom:10px;
+  opacity: 0;
   @include transition(all 1s);
   @include transform(translate3d(0,200%,0));
   &.on {
+    opacity: 1;
     @include transform(translate3d(0,0,0));
   }
 }
@@ -64,8 +65,8 @@ p {
     
   }
   &.result {
+    z-index: 100;
     @include transform(translate3d(0,100%,0));
-    z-index: -100;
     .title,
     .title-sub,
     .title-logo {
