@@ -315,6 +315,25 @@ p {
   }
 }
 
+.sharetip {
+  color: #fff;
+  position: absolute;
+  background-color: rgba(100,100,160,.9);
+  top:30%;
+  left:50%;
+  width: 220px;
+  margin-left: -130px;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  z-index: 500;
+  @include transition(all .3s ease-out);
+  @include transform(scale(0));
+  &.on {
+    @include transform(scale(1));
+  }
+}
+
 @media (min-device-width : 360px) {
   /* 360px width */
   .cloud,

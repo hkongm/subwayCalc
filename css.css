@@ -318,17 +318,39 @@ p {
     -webkit-transform: scale(1);
     transform: scale(1); }
 
+/* line 318, /Users/chriscai/code/git/subwayCalc/css.scss */
+.sharetip {
+  color: #fff;
+  position: absolute;
+  background-color: rgba(100, 100, 160, 0.9);
+  top: 30%;
+  left: 50%;
+  width: 220px;
+  margin-left: -130px;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  z-index: 500;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-transform: scale(0);
+  transform: scale(0); }
+  /* line 332, /Users/chriscai/code/git/subwayCalc/css.scss */
+  .sharetip.on {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+
 @media (min-device-width: 360px) {
   /* 360px width */
-  /* line 327, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 346, /Users/chriscai/code/git/subwayCalc/css.scss */
   .cloud, .zhang, .bluebar, .title, .title-sub, .title-logo, .train, .head {
     height: 235px; }
 
-  /* line 330, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 349, /Users/chriscai/code/git/subwayCalc/css.scss */
   .spacer {
     height: 245px; }
 
-  /* line 334, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 353, /Users/chriscai/code/git/subwayCalc/css.scss */
   .board .txt {
     -webkit-transform: translateX(38%) translateY(290%);
     transform: translateX(38%) translateY(290%); }
@@ -336,40 +358,40 @@ p {
 
 @media (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   /*iphone 6*/
-  /* line 364, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 383, /Users/chriscai/code/git/subwayCalc/css.scss */
   .cloud, .zhang, .bluebar, .title, .title-sub, .title-logo, .train, .head {
     height: 244px; }
 
-  /* line 367, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 386, /Users/chriscai/code/git/subwayCalc/css.scss */
   .spacer {
     height: 255px; }
 
-  /* line 371, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 390, /Users/chriscai/code/git/subwayCalc/css.scss */
   .board .txt {
     -webkit-transform: translateX(38%) translateY(304%);
     transform: translateX(38%) translateY(304%); }
 
-  /* line 375, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 394, /Users/chriscai/code/git/subwayCalc/css.scss */
   .avatar {
     height: 360px; }
  }
 
 @media (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
   /*iphone 6 plus*/
-  /* line 388, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 407, /Users/chriscai/code/git/subwayCalc/css.scss */
   .cloud, .zhang, .bluebar, .title, .title-sub, .title-logo, .train, .head {
     height: 270px; }
 
-  /* line 391, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 410, /Users/chriscai/code/git/subwayCalc/css.scss */
   .spacer {
     height: 280px; }
 
-  /* line 395, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 414, /Users/chriscai/code/git/subwayCalc/css.scss */
   .board .txt {
     -webkit-transform: translateX(38%) translateY(343%);
     transform: translateX(38%) translateY(343%); }
 
-  /* line 399, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 418, /Users/chriscai/code/git/subwayCalc/css.scss */
   .avatar {
     height: 400px; }
  }
@@ -386,56 +408,56 @@ p {
 }
 */
 @-webkit-keyframes pop {
-  /* line 418, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 437, /Users/chriscai/code/git/subwayCalc/css.scss */
   0% {
     opacity: 0.3;
     -webkit-transform: scale(0.1);
     transform: scale(0.1); }
 
-  /* line 422, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 441, /Users/chriscai/code/git/subwayCalc/css.scss */
   60% {
     opacity: 1;
     -webkit-transform: scale(1.1);
     transform: scale(1.1); }
 
-  /* line 426, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 445, /Users/chriscai/code/git/subwayCalc/css.scss */
   75% {
     -webkit-transform: scale(0.9);
     transform: scale(0.9); }
 
-  /* line 429, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 448, /Users/chriscai/code/git/subwayCalc/css.scss */
   100% {
     -webkit-transform: scale(1);
     transform: scale(1); } }
 
 @-webkit-keyframes jump {
-  /* line 435, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 454, /Users/chriscai/code/git/subwayCalc/css.scss */
   0% {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
 
-  /* line 438, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 457, /Users/chriscai/code/git/subwayCalc/css.scss */
   50% {
     -webkit-transform: translate3d(0, -5px, 0);
     transform: translate3d(0, -5px, 0); }
 
-  /* line 441, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 460, /Users/chriscai/code/git/subwayCalc/css.scss */
   100% {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
 
 @-webkit-keyframes jump2 {
-  /* line 447, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 466, /Users/chriscai/code/git/subwayCalc/css.scss */
   0% {
     -webkit-transform: translate3d(-13%, 100%, 0);
     transform: translate3d(-13%, 100%, 0); }
 
-  /* line 450, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 469, /Users/chriscai/code/git/subwayCalc/css.scss */
   50% {
     -webkit-transform: translate3d(-13%, 99%, 0);
     transform: translate3d(-13%, 99%, 0); }
 
-  /* line 453, /Users/chriscai/code/git/subwayCalc/css.scss */
+  /* line 472, /Users/chriscai/code/git/subwayCalc/css.scss */
   100% {
     -webkit-transform: translate3d(-13%, 100%, 0);
     transform: translate3d(-13%, 100%, 0); } }

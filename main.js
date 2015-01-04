@@ -23,6 +23,7 @@
       avatar = $('.avatar'),
       btnShare = $('.share'),
       btnReset = $('.reset'),
+      shareTip = $('.sharetip'),
       add = $('.add'),
       sub = $('.sub'),
       dadd = $('.dadd'),
@@ -64,11 +65,10 @@
     copyrights.classList.add('on');
   }, evTraEnd)
   
-  $('.result').addEventListener(evTraEnd, function () {
+  bindEv($('.result'), function() {
     avatar.classList.add('on');
     title_logo2.classList.add('jump2');
-  })
-
+  }, evTraEnd)
 
   // 提交表单
   bindEv(go, function(){
@@ -127,12 +127,16 @@
   // 重新计算
   bindEv(btnReset, function () {
 //    location.reload();
-    wrapper.classList.toggle('result')
+    wrapper.classList.toggle('result');
+    shareTip.classList.remove('on');
   })
   
   // 分享
   bindEv(btnShare, function () {
-    alert('分享')
+    shareTip.classList.add('on');
+    setTimeout(function() {
+      shareTip.classList.remove('on');
+    }, 3000)
   })
   
   // start 
