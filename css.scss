@@ -34,34 +34,8 @@ p {
       @include transform(scale(.5));
     }
     .result {
-      @include transform(translate3d(0,-100%,0));
-      .title,
-      .title-sub,
-      .title-logo {
-        z-index: 160;
-        &.on {
-          @include transform(translate3d(-13%,100%,0));
-        }
-      }
-      .bluebar {
-        @include transform(translate3d(0,100%,0));
-        z-index: 150;
-      }
-      .btn {
-        position: absolute;
-        top:74%;
-        left:50%;
-        margin-left: -144px;
-        z-index: 200;
-        &.reset {
-          background-color: #61757f;
-          margin-left: 20px;
-          box-shadow: 0 4px 0 darken(#61757f,7%);
-        }
-      }
-      .copyrights {
-        @include transform(translate3d(0,0,0));
-      }
+      z-index: 100;
+      @include transform(translate3d(0,0,0));
     }
   }
 }
@@ -82,14 +56,43 @@ p {
 .page {
   height: 100%;
   width: 100%;
-  position: relative;
+  position: absolute;
+  top:0;
   background-color: #48cbd8;
-  @include transition(all .6s ease-in);
+  @include transition(all .7s ease);
   &.cover {
     
   }
   &.result {
-    z-index: 100;
+    @include transform(translate3d(0,100%,0));
+    z-index: -100;
+    .title,
+    .title-sub,
+    .title-logo {
+      z-index: 160;
+      &.on {
+        @include transform(translate3d(-13%,100%,0));
+      }
+    }
+    .bluebar {
+      @include transform(translate3d(0,100%,0));
+      z-index: 150;
+    }
+    .btn {
+      position: absolute;
+      top:74%;
+      left:50%;
+      margin-left: -144px;
+      z-index: 200;
+      &.reset {
+        background-color: #61757f;
+        margin-left: 20px;
+        box-shadow: 0 4px 0 darken(#61757f,7%);
+      }
+    }
+    .copyrights {
+      @include transform(translate3d(0,0,0));
+    }
   }
 }
 
@@ -140,8 +143,8 @@ p {
 }
 .bluebar {
   background-image: url(img/bluebar.png);
-  @include transform(translate3d(100%,0,0))
-  -webkit-transition-duration: ;
+  @include transform(translate3d(100%,0,0));
+  -webkit-transition-duration:.5s ;
   transition-duration: .5s;
   &.on {
     @include transform(translate3d(0,0,0));
